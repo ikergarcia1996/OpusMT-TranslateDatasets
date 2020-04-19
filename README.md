@@ -99,3 +99,5 @@ python3 translate_dataset.py --dataset_path dutch_sentences.txt --output_path en
 
 You can lowercase all the words using the --lowercase_all argument. If you want to skip lowercasing the first letter of words (i.e PETTER -> Petter) use the --lowercase_capitals argument. 
 
+
+translate_dataset.py will use --num_parallel cores (default:2) each one will preprocess, send the translation request to the marian server and postprocess a batch of lines in parallel. However in my setup it doesn't seem to improve the performance so you can just use the simplified translate_dataset_singlecore.py script. 
