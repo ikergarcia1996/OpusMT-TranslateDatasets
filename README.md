@@ -81,7 +81,7 @@ rm -rf OpusMT-TranslateDatasets
 
 # Translate a dataset
 
-Download the pre-trained model you want to use from https://github.com/Helsinki-NLP/Opus-MT-train/tree/master/models
+Download the pre-trained model you want to use from https://github.com/Helsinki-NLP/Opus-MT-train/tree/master/models.
 Unzip the model in the directory you want (i.e model/en-es)
 Put the text you want to translate in a text file. The script will translate the file line by line, a sentence per line is recommended but not necessary, if there are multiple sentences in a line Opus-MT will perform sentence segmentation, however, huge lines may cause Opus-MT server to crash. In the output file, each line will correspond to the translation of each line in the input file. 
 
