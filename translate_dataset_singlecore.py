@@ -61,24 +61,11 @@ def do_lowercase_capitals(sentence: str) -> str:
 
 def translate_batch(
     port: int,
-    source_lang: str,
-    target_lang: str,
-    sourcebpe: str,
-    targetbpe: str,
-    sourcespm: str,
-    targetspm: str,
     lowercase_all: bool,
     lowercase_capitals: bool,
+    contentprocessor: ContentProcessor,
     lines: List[str],
 ) -> str:
-    contentprocessor: ContentProcessor = ContentProcessor(
-        source_lang,
-        target_lang,
-        sourcebpe=sourcebpe,
-        targetbpe=targetbpe,
-        sourcespm=sourcespm,
-        targetspm=targetspm,
-    )
 
     translated_lines: List[str] = []
     for line in lines:
@@ -118,6 +105,14 @@ def translate_dataset(
     time.sleep(10.0)
 
     print("Dataset translation...")
+    contentprocessor: ContentProcessor = ContentProcessor(
+        source_lang,
+        target_lang,
+        sourcebpe=sourcebpe,
+        targetbpe=targetbpe,
+        sourcespm=sourcespm,
+        targetspm=targetspm,
+    )
     num_lines: int = count_lines(dataset_path)
 
     with tqdm(total=num_lines) as pbar:
@@ -129,14 +124,9 @@ def translate_dataset(
 
                     result: str = translate_batch(
                         port,
-                        source_lang,
-                        target_lang,
-                        sourcebpe,
-                        targetbpe,
-                        sourcespm,
-                        targetspm,
                         lowercase_all,
                         lowercase_capitals,
+                        contentprocessor,
                         lines,
                     )
 
