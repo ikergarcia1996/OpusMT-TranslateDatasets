@@ -8,7 +8,6 @@ Instructions: https://marian-nmt.github.io/docs/
 ### Install requeriments:
 ```
 sudo apt-get install ca-certificates git wget gnupg build-essential lsb-release g++ automake autogen libtool cmake-data cmake unzip libboost-all-dev libblas-dev libopenblas-dev libz-dev libssl-dev libprotobuf17 protobuf-compiler libprotobuf-dev python3-dev python3-pip python3-setuptools python3-websocket
-
 ```
 
 ### GPU support (strongly reccomended. CUDA required):
