@@ -1,5 +1,4 @@
 from argparse import Namespace
-
 from tornado import process
 from shlex import quote
 import websocket
