@@ -86,6 +86,7 @@ Unzip the model in the directory you want (i.e model/en-es)
 Put the text you want to translate in a text file. The script will translate the file line by line, a sentence per line is recommended but not necessary, if there are multiple sentences in a line Opus-MT will perform sentence segmentation, however, huge lines may cause Opus-MT server to crash. In the output file, each line will correspond to the translation of each line in the input file. 
 
 Some models use bpe codes and other models use a sentencepiece model (take a look inside the model directory to see if it contains .bpe or .spm files), set the parameters accordingly.
+
 English -> Spanish example (BPE): 
 ```
 python3 translate_dataset.py --dataset_path english_sentences.txt --output_path spanish_sentences.txt --decoder_path models/en-es/decoder.yml --sourcebpe models/en-es/source.bpe --targetbpe models/en-es/target.bpe --source_lang en --target_lang es 
