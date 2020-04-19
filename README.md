@@ -71,8 +71,7 @@ cd Opus-MT
 pip install -r requirements.txt
 ```
 
-2) Add my script to Opus-MT
-Just put translate_dataset.py into the Opus-MT repository
+2) Add my script to Opus-MT. Just copy translate_dataset.py into the Opus-MT repository
 ```
 pip install tqdm
 git clone https://github.com/ikergarcia1996/OpusMT-TranslateDatasets.git
