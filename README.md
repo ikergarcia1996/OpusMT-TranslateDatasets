@@ -1,5 +1,5 @@
 # OpusMT: Translate Datasets
-[Opus-MT](https://github.com/Helsinki-NLP/Opus-MT) provides pre-trained translation systems for a huge amount of languages. This is a very valuable resource for the research community. However OpusMT architecture is not ideal for translating large texts or datasets. This changes that allowing translating a large text file with just one command!!
+[Opus-MT](https://github.com/Helsinki-NLP/Opus-MT) provides pre-trained translation systems for a huge amount of languages. This is a very valuable resource for the research community. However OpusMT architecture is not ideal for translating large texts or datasets. This script changes that allowing translating a large text file with just one command!!
 
 # Simplified Installation
 ## Install Marian
